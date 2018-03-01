@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InputContainer {
-    List<Ride> rides = new ArrayList<>();
-    int vehicles;
+    static ArrayList<Ride> rides = new ArrayList<>();
+    static int vehicles;
     int rows;
     int columns;
     int num_of_rides;
     int bonus;
-    int steps;
+    static int steps;
 
     public void loadInput(String fileName) {
         try {
@@ -54,9 +54,10 @@ public class InputContainer {
 
     public static void main(String[] args) {
         InputContainer inputContainer = new InputContainer();
-        inputContainer.loadInput("C:\\Users\\Jonasz\\hc\\out\\production\\hc\\resources\\a_example.in");
+        inputContainer.loadInput("C:\\Users\\Silverline\\Desktop\\data\\a_example.in");
 
-        Solver solver = new Solver();
-        solver.findSolution(inputContainer.rides, inputContainer.num_of_rides, inputContainer.vehicles);
+        Solv2 s = new Solv2(vehicles,rides,steps);
+
+
     }
 }

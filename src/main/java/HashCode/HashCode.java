@@ -1,4 +1,5 @@
 package HashCode;
 
-public class HashCode {
+public class HashCode
+{
 }
