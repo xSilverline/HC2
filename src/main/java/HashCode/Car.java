@@ -7,8 +7,12 @@ public class Car
 {
     List<Ride> rideList = new ArrayList<>();
     boolean timetable[];
+    static int counter = 0;
+    int id;
 
     public Car(int max_time) {
+        id = counter;
+        counter++;
         timetable = new boolean[max_time];
         for(int i = 0; i < max_time; i++) {
             timetable[i] = false;
@@ -43,5 +47,14 @@ public class Car
         }
 
         return true;
+    }
+
+    public String getRides() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.id + " ");
+        for(Ride r: rideList) {
+            sb.append(r.id + " ");
+        }
+        return sb.toString();
     }
 }
