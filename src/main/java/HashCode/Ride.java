@@ -29,12 +29,12 @@ public class Ride {
 
     @Override
     public String toString() {
-        return "java.HashCode.Ride{" +
-                "start_x=" + start_x +
-                ", start_y=" + start_y +
-                ", end_x=" + end_x +
-                ", end_y=" + end_y +
-                ", start=" + start +
+        return "Ride{" +
+                "( " + start_x +
+                " , " + start_y +
+                ") -> ( " + end_x +
+                " , " + end_y +
+                " ) start=" + start +
                 ", end=" + end +
                 '}';
     }
