@@ -55,5 +55,8 @@ public class InputContainer {
     public static void main(String[] args) {
         InputContainer inputContainer = new InputContainer();
         inputContainer.loadInput("C:\\Users\\Jonasz\\hc\\out\\production\\hc\\resources\\a_example.in");
+
+        Solver solver = new Solver();
+        solver.findSolution(inputContainer.rides, inputContainer.num_of_rides, inputContainer.vehicles);
     }
 }

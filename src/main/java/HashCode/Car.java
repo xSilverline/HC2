@@ -1,49 +1,20 @@
 package HashCode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car
 {
-    private int startInsertionX;
-    private int startInsertionY;
-    private int finishInsertionX;
-    private int finishInsertionY;
-    private int start;
-    private int finish;
+    List<Ride> rideList = new ArrayList<>();
 
-    public Car(int a, int b, int x, int y, int s, int f)
-    {
-        this.startInsertionX = a;
-        this.startInsertionY = b;
-        this.finishInsertionX = x;
-        this.finishInsertionY = y;
-        this.start = s;
-        this.finish = f;
+    public int getRidesSize() {
+        return rideList.size();
     }
 
-    int getStart()
-    {
-        return start;
+    @Override
+    public String toString() {
+        return "Car{" +
+                "rideList=" + rideList +
+                '}';
     }
-    int getFinish()
-    {
-        return finish;
-    }
-
-    int getStartInsertionX()
-    {
-        return startInsertionX;
-    }
-    int getStartInsertionY()
-    {
-        return startInsertionY;
-    }
-    int getFinishInsertionX()
-    {
-        return finishInsertionX;
-    }
-    int getFinishInsertionY()
-    {
-        return finishInsertionY;
-    }
-
-
 }
